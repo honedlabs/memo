@@ -91,7 +91,7 @@ it('forgets when forgetting', function () {
         ->forget('key')->toBeTrue()
         ->isMemoized('key')->toBeFalse()
         ->get('key')->toBeNull();
-        // ->isMemoized('key')->toBeFalse();
+    // ->isMemoized('key')->toBeFalse();
 });
 
 it('forgets when flushing', function () {
@@ -103,7 +103,7 @@ it('forgets when flushing', function () {
         ->flush()->toBeTrue()
         ->isMemoized('key')->toBeFalse()
         ->get('key')->toBeNull();
-        // ->isMemoized('key')->toBeFalse();
+    // ->isMemoized('key')->toBeFalse();
 });
 
 it('uses store prefix', function () {
@@ -115,13 +115,9 @@ it('uses store prefix', function () {
     expect(app('cache')->getPrefix())->toBe('foo');
 })->todo();
 
-it('prefixes keys', function () {
+it('prefixes keys', function () {})->todo();
 
-})->todo();
-
-it('dispatches events', function () {
-
-})->todo();
+it('dispatches events', function () {})->todo();
 
 it('throws when store does not support locks', function () {
     $this->freezeTime();
